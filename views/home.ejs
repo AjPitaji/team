@@ -28,7 +28,7 @@
 <div class="grid-container">
 
  <% list.forEach(function(ele){%>
-  <div class="card" style="background-image:url(<%=ele.img;%>);">
+  <div class="card" style="background-image:url('<%=ele.img%>');">
        <div class="card-content">
         <h2 class="card-title"><%=ele.name%>(<%=ele.yos%>)</h2>
         <p class="card-body"><%=ele.des%></p>
