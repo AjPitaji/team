@@ -1,0 +1,94 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+  </head>
+  <body>
+    <h1>REMOVE MEMBER FORM</h1>
+    <p>Please Enter the full name of the member to be removed</p>
+    <form action='/RemoveMember' method="post">
+      <fieldset>
+        <label for="name">Name: <input name="name" type="text" required /></label>
+        </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(25,27,27);
+    color: rgb(180,30,20);
+    font-family: 'Share Tech Mono', monospace;   font-size: 16px;
+    }
+    
+    h1, p {
+    margin: 1em auto;
+    text-align: center;
+    }
+    
+    form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+    }
+    
+    fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+    }
+    
+    fieldset:last-of-type {
+    border-bottom: none;
+    }
+    
+    label {
+    display: block;
+    margin: 0.5rem 0;
+    }
+    
+    input,
+    textarea,
+    select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+    }
+    
+    input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+    }
+    
+    .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    }
+    
+    input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+    }
+    
+    input[type="file"] {
+    padding: 1px 2px;
+    }
+    
+    a {
+    color: #dfdfe2
+    }
+    </style>
+</html>
