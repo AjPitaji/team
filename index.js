@@ -9,16 +9,8 @@ const bodyParser = require("body-parser");
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-mongoose.connect(process.env.mongoSt)
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.mongoSt);
-    console.log(`MongoDB Connected: ${mongoose.connection.host}`);
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-};
+
+mongoose.connect(process.env.mongoSt);
 
 const MemberSchema = new Schema(
   {
@@ -112,11 +104,25 @@ app.route("/UpdateMember")
     res.status(500).send(error);
   }
 })
-//Delete Update performed
+//Update operation performed
 
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.mongoSt, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log(`MongoDB Connected: ${mongoose.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
 
 connectDB().then(() => {
-app.listen(process.env.PORT||3000, function() {
-  console.log("Server started on port 3000");
+  app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server started on port ${process.env.PORT || 3000}`);
+  });
 });
-});
+
+module.exports = app;
