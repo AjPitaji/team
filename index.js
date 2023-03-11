@@ -29,13 +29,19 @@ app.get("/",async(req,res)=>{
    
    list=[]
    const result= await MemberModel.find()
-    result.forEach(element => {
-      var image = 'https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg'
-      if(element.g=="f"){
-        image = "https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436180.jpg"
-      }
-      list.push({name:element.Name,des:element.Description,tks:element.Tech_Stack,yos:element.Year_of_Study,img:image})
+   result.forEach(element => {
+    var image = '/images/male.jpg';
+    if (element.g == "f") {
+      image = '/images/female.jpg';
+    }
+    list.push({
+      name: element.Name,
+      des: element.Description,
+      tks: element.Tech_Stack,
+      yos: element.Year_of_Study,
+      img: image
     });
+  });
    res.render("home.ejs",{list:list})
 });
 app.get("/mem-json",async(req,res)=>{
