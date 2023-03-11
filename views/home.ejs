@@ -208,7 +208,16 @@ background: var(--clr-accent-400)
   display: inline-block;
   line-height: 1em;
 }
-
+@media only screen and (max-width: 1600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  }
+  @media only screen and (max-width: 1100px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  }
 @media only screen and (max-width: 600px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -218,11 +227,7 @@ background: var(--clr-accent-400)
   }
 }
 
-@media only screen and (max-width: 1600px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  }
+
 
 
 </style>
