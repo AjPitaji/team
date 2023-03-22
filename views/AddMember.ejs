@@ -1,31 +1,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Registration Form</title>
+    <title> PET Registration Form</title>
     <!-- <link rel="stylesheet" href="css/styles.css" /> -->
   </head>
   <body>
-    <h1>ADD MEMBER FORM</h1>
+    <h1>ADD A PET</h1>
     <p>Please fill out this form with the required information</p>
     <form action='/AddMember' method="post">
       <fieldset>
         <label for="name">Name: <input name="name" type="text" required /></label>
-        <label for="email">Year of Study <input  name="yos"  required /></label>
+        <label for="type">Type: <input  name="type"  required /></label>
         </fieldset>
+        <fieldset>
+          <label for="name">Age: <input name="age" type="text" required /></label>
+          <label for="email">Owner Name: <input  name="owner"  required /></label>
+          </fieldset>
       <fieldset>  
-        <label for="personal-account"><input id="male" type="radio" name="gender" class="inline" value="m"/> Male</label>
-        <label for="business-account"><input id="female" type="radio" name="gender" class="inline" value="f"/> Female</label>
+        <label for="personal-account"><input id="male" type="radio" name="gender" class="inline" value="male"/> Male</label>
+        <label for="business-account"><input id="female" type="radio" name="gender" class="inline" value="female"/> Female</label>
       </fieldset>
       <fieldset>
-        <label for="bio">A brief description of the member:
-          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I am.. "></textarea>
+        <label for="bio">A brief description of your PET:
+          <textarea id="bio" name="des" rows="3" cols="30" placeholder="I am.. "></textarea>
         </label>
       </fieldset>
       <fieldset>
-        <label for="quote">Enter 3 skills of the member:
-          <input name="skill1" type="text" required />
-          <input name="skill2" type="text" required />
-          <input name="skill3" type="text" required />
+        <label for="quote">Give the Link to pretty picure of your pet:
+          <input name="img" type="text"  />
         </label>
       </fieldset>
       <input type="submit" value="Submit" />
@@ -37,7 +39,7 @@
     height: 100vh;
     margin: 0;
     background-color: rgb(25,27,27);
-    color: hsl(142, 90%, 60%);
+    color: pink;
     font-family: 'Share Tech Mono', monospace;   font-size: 16px;
     }
     
